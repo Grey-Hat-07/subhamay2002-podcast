@@ -1,5 +1,5 @@
-import Signin from './component/Signin';
-import Home from './component/Home'
+import Signin from './components/Signin';
+import Home from './components/Home'
 import './App.css';
 import { useState } from 'react';
 
