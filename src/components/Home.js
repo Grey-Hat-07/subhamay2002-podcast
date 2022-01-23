@@ -4,12 +4,14 @@ import Aboutus from './Aboutus'
 import Profile from './Profile'
 import Dashboard from './Dashboard'
 import Footer from './Footer'
+import Form from './fill upload/Form'
 
 export default function Home(props) {
     const [Page, setPage] = useState('home')
     if(Page === 'home') {
     return (
         <div>
+            < Form/>
             <Navbar setstatus={props.setstatus} setPage={setPage}/>
             <Dashboard />
             <Footer />

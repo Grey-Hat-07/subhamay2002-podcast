@@ -1,6 +1,10 @@
-import firebase from 'firebase/app';
+import firebase from "firebase/compat/app"
+import { getStorage } from "firebase/storage";
+
 import firebaseConfig from "./firebase.config";
 
-firebase.initializeApp(firebaseConfig);
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-export default firebase;
+
+export const storage = getStorage(firebaseApp);
+export default firebaseApp;
