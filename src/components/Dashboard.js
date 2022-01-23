@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css'
 import Search from './Search';
+import Form from "./fill upload/Form";
 export default function Dashboard() {
     const audio = require('../everything.mp3');
     const Sound = () => {
@@ -22,6 +23,7 @@ export default function Dashboard() {
                 <Search />
             </div>
             <div className="col-md-9">
+            < Form/>
                 <div className="card">
                     <div className="card-body">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU"
