@@ -7,9 +7,9 @@ import Card from './music card/Card';
 
 export default function Dashboard() {
     var propData = {
-        "title": "soumya",
+        "title": "on my way",
         "publisher": "alan walker",
-        "description": "dfsfs",
+        "description": "nice song",
     }
     return <div className='container'><br /><br />
         <h1>Dashboard</h1>
