@@ -1,5 +1,5 @@
-import React from 'react';
-import { Add } from './Add';
+import React,{useState} from 'react';
+import Form from "./fill upload/Form";
 import '../App.css'
 export default function Profile() {
 
@@ -16,12 +16,17 @@ export default function Profile() {
         height: 120,
         float: 'left'
     }
+    const [add, setadd] = useState(false);
+    const addform=()=>{
+        setadd(true);
+    console.log(add);}
     return <div className='container'><br /><br />
         <h1>Profile</h1>
         <h5>Name:</h5>
         <h5>Email:</h5>
+        <Form setadd={setadd} add={add}/>
         <div className="row">
-            <button className="btn btn-info">+Add </button>
+            <button className="btn btn-info" onClick={addform}>+Add </button>
         </div>
 
         <div className="row">
