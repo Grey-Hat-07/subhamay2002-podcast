@@ -28,7 +28,7 @@ export default function Profile() {
         <div className="row">
             <button className="btn btn-info" onClick={addform}>+Add </button>
         </div>
-
+        <br/>
         <div className="row">
             <div className="card col-md-3" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
