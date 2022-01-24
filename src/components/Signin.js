@@ -1,8 +1,6 @@
 import React,{useState} from 'react';
 import '../App.css';
-
-
-
+import {useCookies} from 'react-cookie';
 
 export default function Signin(props) {
     let radius = {

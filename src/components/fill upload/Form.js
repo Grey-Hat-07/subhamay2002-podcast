@@ -13,9 +13,13 @@ function Form(props) {
           console.log(music);
         }
     };
-    
+    const validfile = new RegExp(/\.(mp3|wav|flac|m4a)$/i);
     const handleUpload = (e) => {
       e.preventDefault();
+      if(!validfile.test(music.name)){
+        alert('Please upload a valid audio file');
+        return;
+      }
         if (!music) return;
         const storageRef = ref(storage, `music/${music.name}`);
         const uploadTask = uploadBytesResumable(storageRef, music);
