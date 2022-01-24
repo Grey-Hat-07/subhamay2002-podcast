@@ -34,7 +34,7 @@ export const Navbar = (props) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
                         <List />
-                        <button className="btn btn-danger" onClick={(e) => { props.setstatus('logout');}}>Logout</button>
+                        <button className="btn btn-danger" onClick={(e) => { props.setstatus('logout');window.localStorage.setItem('Page', JSON.stringify('home'));}}>Logout</button>
                     </div>
                 </div>
             </nav>
