@@ -38,7 +38,7 @@ export default function Profile() {
         <div className="row">
             <div className="card col-md-3" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="image" style={image}/>
+                alt="" style={image}/>
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -47,7 +47,7 @@ export default function Profile() {
             </div>
             <div className="card col-md-3" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="image" style={image}/>
+                alt="" style={image}/>
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -56,7 +56,7 @@ export default function Profile() {
             </div>
             <div className="card col-md-3" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="image" style={image}/>
+                alt="" style={image}/>
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -65,7 +65,7 @@ export default function Profile() {
             </div>
             <div className="card col-md-3" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="image" style={image}/>
+                alt="" style={image}/>
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -74,7 +74,7 @@ export default function Profile() {
             </div>
             <div className="card col-md-3" >
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="image" style={image}/>
+                alt="" style={image}/>
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
