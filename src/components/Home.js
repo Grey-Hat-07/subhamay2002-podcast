@@ -38,6 +38,13 @@ export default function Home(props) {
                 <Footer />
             </div>
         )
+    }
+      else {
+          return (
+              <>
+              <h1>deadend</h1>
+              </>
+          )
+      }
 
     }
-}

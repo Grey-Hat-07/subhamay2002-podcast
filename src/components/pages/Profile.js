@@ -7,9 +7,12 @@ export default function Profile() {
     const audio = require('../../everything.mp3');
     const Sound = () => {
         return (
-            <audio className='audio-player' controls>
-                <source src={audio} type="audio/mpeg" />
-            </audio>
+            // <audio className='audio-player' controls>
+            //     <source src={audio} type="audio/mpeg" />
+            // </audio>
+            <>
+            hello
+            </>
         )
     }
     const [cookies, setCookie] = useCookies(['user']);
