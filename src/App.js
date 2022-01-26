@@ -1,4 +1,4 @@
-import Signin from './components/Signin';
+import Sign from './components/Sign';
 import Home from './components/Home'
 import './App.css';
 import { useState,useEffect } from 'react';
@@ -17,7 +17,7 @@ function App() {
   if (status === 'logout') {
     return (
       <div className="App">
-        <Signin setstatus={setstatus} />
+        <Sign setstatus={setstatus} />
       </div>
     );
   }
