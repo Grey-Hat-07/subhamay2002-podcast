@@ -5,9 +5,10 @@ export default function Signlog(props) {
         Email:'',
         Password:''
     });
-    const [cookies, setCookie] = useCookies(['user']);
+    const [cookies, setCookie] = useCookies();
     const setusercookies = () => {
-        setCookie('user', user, { path: '/' });
+        setCookie('user', user, { path: '/' }, {expires: 0});
+        props.setstatus('login');
     }
     //login
     if (props.sign === 'login') {
