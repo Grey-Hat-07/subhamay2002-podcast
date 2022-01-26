@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
-import Form from "./fill upload/Form";
-import '../App.css'
+import Form from "../fill upload/Form";
+import '../../App.css';
 export default function Profile() {
 
-    const audio = require('../everything.mp3');
+    const audio = require('../../everything.mp3');
     const Sound = () => {
         return (
             <audio className='audio-player' controls>

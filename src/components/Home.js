@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Navbar } from './Navbar'
-import Aboutus from './Aboutus'
-import Profile from './Profile'
-import Dashboard from './Dashboard'
+import Dashboard from './pages/Dashboard'
+import Profile from './pages/Profile'
+import Aboutus from './pages/Aboutus'
 import Footer from './Footer'
 
 export default function Home(props) {

@@ -1,13 +1,12 @@
 import React,{useState} from 'react';
 import '../App.css';
-import {useCookies} from 'react-cookie';
+// import {useCookies} from 'react-cookie';
 
 export default function Signin(props) {
-    let radius = {
-        borderRadius: '10px'
-    }
+    
     const [sign, setSign] = useState('login');
     var Sign = () => {
+        const [Email, setEmail] = useState('qqq');
         if(sign === 'login'){
         return (
             <form>
@@ -20,12 +19,13 @@ export default function Signin(props) {
                 <h5 className="fw-normal mb-3 pb-3" >Sign into your account</h5>
     
                 <div className="form-outline mb-4">
-                    <input type="email" id="form2Example17" className="form-control form-control-lg" placeholder='Email address' />
+                    <input type="email" value={Email} className="form-control form-control-lg" onChange={(e) => setEmail(e.target.value)}
+                      placeholder='Email address' />
                     {/* <label className="form-label" for="form2Example17">Email address</label> */}
                 </div>
     
                 <div className="form-outline mb-4">
-                    <input type="password" id="form2Example27" className="form-control form-control-lg" placeholder='Password' />
+                    <input type="password"  className="form-control form-control-lg" placeholder='Password' />
                     {/* <label className="form-label" for="form2Example27">Password</label> */}
                 </div>
                 <div className="pt-1 mb-4">
@@ -77,13 +77,13 @@ export default function Signin(props) {
             <div className="container py-5 h-100">
                 <div className="row d-flex justify-content-center align-items-center h-100">
                     <div className="col col-xl-10">
-                        <div className="card cardback" style={radius} >
+                        <div className="card cardback radii" >
                             <div className="row g-0">
                                 <div className="col-md-6 col-lg-5 d-none d-md-block">
                                     <img
                                         src="https://images.pexels.com/photos/830829/pexels-photo-830829.jpeg?w=400&h=600&fit=crop"
                                         alt="login form"
-                                        className="img-fluid" style={radius}
+                                        className="img-fluid radii" 
                                     />
                                 </div>
                                 <div className="col-md-6 col-lg-7 d-flex align-items-center">

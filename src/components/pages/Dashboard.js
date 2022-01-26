@@ -1,8 +1,8 @@
 import React from 'react';
-import '../App.css'
-import Search from './Search';
-import Form from "./fill upload/Form";
-import Card from './music card/Card';
+import '../../App.css';
+import Search from '../Search';
+import Form from "../fill upload/Form";
+import Card from '../music card/Card';
 
 
 export default function Dashboard() {
