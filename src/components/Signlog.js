@@ -1,6 +1,14 @@
-import React from 'react';
-
+import React,{useState} from 'react';
+import {useCookies} from 'react-cookie';
 export default function Signlog(props) {
+    const [user, setuser] = useState({
+        Email:'',
+        Password:''
+    });
+    const [cookies, setCookie] = useCookies(['user']);
+    const setusercookies = () => {
+        setCookie('user', user, { path: '/' });
+    }
     //login
     if (props.sign === 'login') {
         return (
@@ -14,17 +22,17 @@ export default function Signlog(props) {
                 <h5 className="fw-normal mb-3 pb-3" >Sign into your account</h5>
 
                 <div className="form-outline mb-4">
-                    <input type="email" value={props.Email} className="form-control form-control-lg" onChange={(e) => props.setEmail(e.target.value)}
-                        placeholder='Email address' />
-                    {/* <label className="form-label" for="form2Example17">Email address</label> */}
+                    <input type="email" className="form-control form-control-lg" placeholder="Email Address" 
+                    onChange={(e) => setuser({ ...user, Email: e.target.value })} />
                 </div>
 
                 <div className="form-outline mb-4">
-                    <input type="password" className="form-control form-control-lg" placeholder='Password' />
+                    <input type="password" className="form-control form-control-lg" placeholder='Password' 
+                    onChange={(e) => setuser({ ...user, Password: e.target.value })} />
                     {/* <label className="form-label" for="form2Example27">Password</label> */}
                 </div>
                 <div className="pt-1 mb-4">
-                    <button className="btn btn-dark btn-lg btn-block App" type="button" onClick={(e) => props.setstatus('login')}>Login</button>
+                    <button className="btn btn-dark btn-lg btn-block App" type="button" onClick={setusercookies}>Login</button>
                 </div>
 
                 <p className="mb-5 pb-lg-2">Don't have an account?<button className="btn btn-secondary" onClick={(e) => props.setSign('signup')}>Sign up</button></p>
@@ -46,12 +54,10 @@ export default function Signlog(props) {
 
                     <div className="form-outline mb-3">
                         <input type="email" id="form2Example17" className="form-control form-control-lg" placeholder='Email address' />
-                        {/* <label className="form-label" for="form2Example17">Email address</label> */}
                     </div>
 
                     <div className="form-outline mb-3">
                         <input type="password" id="password" className="form-control form-control-lg" placeholder='Enter Password' />
-                        {/* <label className="form-label" for="form2Example27">Password</label> */}
                     </div>
                     <div className="form-outline mb-3">
                         <input type="password" id="confirmpassword" className="form-control form-control-lg" placeholder='Confirm Password' />

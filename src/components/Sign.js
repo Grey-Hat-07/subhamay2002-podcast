@@ -4,7 +4,6 @@ import Signlog from './Signlog';
 // import {useCookies} from 'react-cookie';
 
 export default function Sign(props) {
-    const [Email, setEmail] = useState('');
     const [sign, setSign] = useState('login');
 
     return (
@@ -23,7 +22,7 @@ export default function Sign(props) {
                                 </div>
                                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
                                     <div className="card-body p-4 p-lg-5 text-black">
-                                       <Signlog sign={sign} setSign={setSign}  setEmail={setEmail} setstatus={props.setstatus}/>
+                                       <Signlog sign={sign} setSign={setSign} setstatus={props.setstatus}/>
                                         
                                     </div>
                                 </div>
