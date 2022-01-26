@@ -54,14 +54,16 @@ export default function Signlog(props) {
                     <h5 className="fw-normal mb-3 pb-3" >Create your new account</h5>
 
                     <div className="form-outline mb-3">
-                        <input type="email" id="form2Example17" className="form-control form-control-lg" placeholder='Email address' />
-                    </div>
-
-                    <div className="form-outline mb-3">
-                        <input type="password" id="password" className="form-control form-control-lg" placeholder='Enter Password' />
+                        <input type="email" id="form2Example17" className="form-control" placeholder='Email address' />
                     </div>
                     <div className="form-outline mb-3">
-                        <input type="password" id="confirmpassword" className="form-control form-control-lg" placeholder='Confirm Password' />
+                        <input type="text" id="form2Example17" className="form-control" placeholder='Enter Name' />
+                    </div>
+                    <div className="form-outline mb-3">
+                        <input type="password" id="password" className="form-control " placeholder='Enter Password' />
+                    </div>
+                    <div className="form-outline mb-3">
+                        <input type="password" id="confirmpassword" className="form-control" placeholder='Confirm Password' />
                     </div>
                     <div className="pt-1 mb-4">
                         <button className="btn btn-dark btn-lg btn-block App" type="button" onClick={(e) => props.setstatus('login')}>Signup</button>
