@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import Form from "../fill upload/Form";
+import Form from "../upload/Form";
 import { useCookies } from 'react-cookie';
 import '../../App.css';
 export default function Profile() {
