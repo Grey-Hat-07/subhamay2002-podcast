@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.css';
 import Search from '../Search';
 import Form from "../upload/Form";
-import Card from '../music card/Card';
+import Card from '../music/Card';
 
 
 export default function Dashboard() {
