@@ -5,19 +5,19 @@ import Profile from './pages/Profile'
 import Aboutus from './pages/Aboutus'
 import Footer from './Footer'
 
-export default function Home(props) {
+export default function Home({setUser}) {
     const [Page, setPage] = useState('home')
-    useEffect(() => {
-        setPage(JSON.parse(window.localStorage.getItem('Page')));
-    }, []);
-    useEffect(() => {
-        window.localStorage.setItem('Page', JSON.stringify(Page));
-    });
+    // useEffect(() => {
+    //     setPage(JSON.parse(window.localStorage.getItem('Page')));
+    // }, []);
+    // useEffect(() => {
+    //     window.localStorage.setItem('Page', JSON.stringify(Page));
+    // });
 
     if (Page === 'home') {
         return (
             <div>
-                <Navbar setstatus={props.setstatus} setPage={setPage} />
+                <Navbar setUser={setUser} setPage={setPage} />
                 <Dashboard />
                 <Footer />
             </div>
@@ -25,7 +25,7 @@ export default function Home(props) {
     } else if (Page === 'profile') {
         return (
             <div>
-                <Navbar setstatus={props.setstatus} setPage={setPage} />
+                <Navbar setstatus={setUser} setPage={setPage} />
                 <Profile />
                 <Footer />
             </div>
@@ -33,7 +33,7 @@ export default function Home(props) {
     } else if (Page === 'aboutus') {
         return (
             <div>
-                <Navbar setstatus={props.setstatus} setPage={setPage} />
+                <Navbar setstatus={setUser} setPage={setPage} />
                 <Aboutus />
                 <Footer />
             </div>

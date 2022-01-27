@@ -15,7 +15,7 @@ export default function Profile() {
             </>
         )
     }
-    const [cookies, setCookie] = useCookies(['user']);
+    // const [cookies, setCookie] = useCookies(['user']);
 
     const image = {
         width: 140,
@@ -29,7 +29,7 @@ export default function Profile() {
     return <div className='container'><br /><br />
         <h1>Profile</h1>
         <h5>Name:</h5>
-        <h5>Email: {cookies.user.Email}</h5>
+        {/* <h5>Email: {cookies.user.Email}</h5> */}
         <Form setadd={setadd} add={add}/>
         <div className="row">
             <button className="btn btn-info" onClick={addform}>+Add </button>
