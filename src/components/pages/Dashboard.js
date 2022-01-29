@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../../App.css';
 import Search from '../Search';
 import Form from "../upload/Form";
@@ -6,11 +6,11 @@ import Card from '../music/Card';
 
 
 export default function Dashboard() {
-    var propData = {
-        "title": "on my way",
-        "publisher": "alan walker",
-        "description": "nice song",
-    }
+    const [data, setdata] = useState({
+        title: 'justin bieber',
+        description: 'nice song',
+        publisher: 'alan walker'
+    });
     return <div className='container'><br /><br />
         <h1>Dashboard</h1>
         <div className="row">
@@ -19,7 +19,7 @@ export default function Dashboard() {
             </div>
             <div className="col-md-9">
                 < Form />
-                < Card data={propData} />
+                < Card data={data} />
             </div>
         </div>
     </div>;
