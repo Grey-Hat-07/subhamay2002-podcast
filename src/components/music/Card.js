@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Card({ data }) {
+function Card(props) {
+    let data = props.data;
     const image = {
         width: 100,
         height: 100,

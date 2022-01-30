@@ -1,16 +1,37 @@
-import React,{useState} from 'react';
+import React from 'react';
 import '../../App.css';
 import Search from '../Search';
-import Form from "../upload/Form";
 import Card from '../music/Card';
 
 
 export default function Dashboard() {
-    const [data, setdata] = useState({
-        title: 'justin bieber',
-        description: 'nice song',
-        publisher: 'alan walker'
-    });
+    var musicData = [
+        {
+            title: 'faded',
+            description: 'nice song',
+            publisher: 'alan walker'
+        }, 
+        {
+            title: 'alone',
+            description: 'nice song',
+            publisher: 'alan walker'
+        }, 
+        {
+            title: 'darkside',
+            description: 'nice song',
+            publisher: 'alan walker'
+        }, 
+        {
+            title: 'the way you look at me',
+            description: 'nice song',
+            publisher: 'alan walker'
+        }
+    ]
+    // const [data, setdata] = useState({
+    //     title: 'justin bieber',
+    //     description: 'nice song',
+    //     publisher: 'alan walker'
+    // });
     return <div className='container'><br /><br />
         <h1>Dashboard</h1>
         <div className="row">
@@ -18,8 +39,11 @@ export default function Dashboard() {
                 <Search />
             </div>
             <div className="col-md-9">
-                < Form />
-                < Card data={data} />
+                {
+                    musicData.map((data,index) => {
+                        return < Card data={data} key={index} />
+                    })
+                }
             </div>
         </div>
     </div>;
