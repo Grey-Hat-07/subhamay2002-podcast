@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GoogleButton from 'react-google-button';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-
 import '../App.css';
-// import Signlog from './Signlog';
 import { fireAuth } from '../firebase/main.firebase';
 
-// import {useCookies} from 'react-cookie';
 
 export default function Sign({setUser}) {
-    // const [sign, setSign] = useState('login');
     const signInWithGoogle = () => {
         const provider = new GoogleAuthProvider();
         signInWithPopup(fireAuth, provider)
@@ -40,7 +36,6 @@ export default function Sign({setUser}) {
                                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
                                     <div className="card-body p-4 p-lg-5 text-black">
                                         <GoogleButton onClick={signInWithGoogle}/>
-                                        {/* <Signlog sign={sign} setSign={setSign} setstatus={props.setstatus} /> */}
                                     </div>
                                 </div>
                             </div>
