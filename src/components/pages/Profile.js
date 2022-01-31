@@ -2,26 +2,37 @@ import React,{useState} from 'react';
 import Form from "../upload/Form";
 import { useCookies } from 'react-cookie';
 import '../../App.css';
+import Profilecard from '../music/Profilecard';
 export default function Profile() {
-
-    const audio = require('../../everything.mp3');
-    const Sound = () => {
-        return (
-            // <audio className='audio-player' controls>
-            //     <source src={audio} type="audio/mpeg" />
-            // </audio>
-            <>
-            hello
-            </>
-        )
-    }
     // const [cookies, setCookie] = useCookies(['user']);
 
-    const image = {
-        width: 140,
-        height: 120,
-        float: 'left'
-    }
+    var musicData = [
+        {
+            title: 'faded',
+            description: 'nice song',
+            publisher: 'alan walker'
+        }, 
+        {
+            title: 'alone',
+            description: 'nice song',
+            publisher: 'alan walker'
+        },
+        {
+            title: 'darkside',
+            description: 'nice song ',
+            publisher: 'alan walker'
+        },
+        {
+            title: 'quintet',
+            description: 'nice song',
+            publisher: 'alan walker'
+        },
+        {
+            title: 'the way you look at me',
+            description: 'nice song',
+            publisher: 'alan walker'
+        }
+    ]
     const [add, setadd] = useState(false);
     const addform=()=>{
         setadd(true);
@@ -36,51 +47,15 @@ export default function Profile() {
         </div>
         <br/>
         <div className="row">
-            <div className="card col-md-3" >
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="" style={image}/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Sound/>
-                </div>
-            </div>
-            <div className="card col-md-3" >
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="" style={image}/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Sound/>
-                </div>
-            </div>
-            <div className="card col-md-3" >
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="" style={image}/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Sound/>
-                </div>
-            </div>
-            <div className="card col-md-3" >
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="" style={image}/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Sound/>
-                </div>
-            </div>
-            <div className="card col-md-3" >
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHWeon8rqu8w-5myvOF4BCM35ZJwjWKHYkEw&usqp=CAU" className="card-img-top" 
-                alt="" style={image}/>
-                <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <Sound/>
-                </div>
-            </div>
+            
+           { 
+                musicData.map((data,index) => {
+                    return < Profilecard data={data} key={index} />
+                })
+           }
+            
+            
+            
         </div>
     </div>;
 }
