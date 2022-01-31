@@ -14,37 +14,18 @@ export default function Home({setUser}) {
     //     window.localStorage.setItem('Page', JSON.stringify(Page));
     // });
 
-    if (Page === 'home') {
+    
         return (
             <div>
                 <Navbar setUser={setUser} setPage={setPage} />
-                <Dashboard />
+                {
+                    Page === 'home' ? <Dashboard /> :
+                    Page === 'profile' ? <Profile /> :
+                    Page === 'aboutus' ? <Aboutus /> :
+                    <h1>404</h1>
+                }
                 <Footer />
             </div>
         )
-    } else if (Page === 'profile') {
-        return (
-            <div>
-                <Navbar setstatus={setUser} setPage={setPage} />
-                <Profile />
-                <Footer />
-            </div>
-        )
-    } else if (Page === 'aboutus') {
-        return (
-            <div>
-                <Navbar setstatus={setUser} setPage={setPage} />
-                <Aboutus />
-                <Footer />
-            </div>
-        )
-    }
-      else {
-          return (
-              <>
-              <h1>deadend</h1>
-              </>
-          )
-      }
 
     }
