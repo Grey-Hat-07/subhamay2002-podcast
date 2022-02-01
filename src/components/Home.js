@@ -5,21 +5,13 @@ import Profile from './pages/Profile'
 import Aboutus from './pages/Aboutus'
 import Footer from './Footer'
 
-export default function Home({setUser}) {
-    const [Page, setPage] = useState('home')
-    // useEffect(() => {
-    //     setPage(JSON.parse(window.localStorage.getItem('Page')));
-    // }, []);
-    // useEffect(() => {
-    //     window.localStorage.setItem('Page', JSON.stringify(Page));
-    // });
-
-    
+export default function Home({music,setUser}) {
+    const [Page, setPage] = useState('home')    
         return (
             <div>
                 <Navbar setUser={setUser} setPage={setPage} />
                 {
-                    Page === 'home' ? <Dashboard /> :
+                    Page === 'home' ? <Dashboard music={music} /> :
                     Page === 'profile' ? <Profile /> :
                     Page === 'aboutus' ? <Aboutus /> :
                     <h1>404</h1>
