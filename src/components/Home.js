@@ -1,23 +1,28 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Navbar } from './Navbar'
 import Dashboard from './pages/Dashboard'
 import Profile from './pages/Profile'
 import Aboutus from './pages/Aboutus'
 import Footer from './Footer'
-
-export default function Home({music,setUser}) {
-    const [Page, setPage] = useState('home')    
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+export default function Home({music,setUser}) {  
         return (
-            <div>
-                <Navbar setUser={setUser} setPage={setPage} />
-                {
-                    Page === 'home' ? <Dashboard music={music} /> :
-                    Page === 'profile' ? <Profile /> :
-                    Page === 'aboutus' ? <Aboutus /> :
-                    <h1>404</h1>
-                }
+            <Router>
+                <Navbar setUser={setUser} />
+                <Switch>
+                    <Route path="/" exact>
+                        <Dashboard music={music} setUser={setUser} />
+                    </Route>
+                    <Route path="/profile">
+                        <Profile setUser={setUser} />
+                    </Route>
+                    <Route path="/aboutus">
+                        <Aboutus />
+                    </Route>
+                </Switch>
                 <Footer />
-            </div>
+            </Router>
+
         )
 
     }
