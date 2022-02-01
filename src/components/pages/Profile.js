@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import Form from "../upload/Form";
-import { useCookies } from 'react-cookie';
+
+// import { useCookies } from 'react-cookie';
 import '../../App.css';
 import Profilecard from '../music/Profilecard';
 export default function Profile() {
