@@ -20,6 +20,14 @@
     -webkit-animation: bouncing-text 5s linear infinite alternate;
     animation: bouncing-text 10s linear infinite alternate;
 }
+.imgdetails{
+    
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 @-moz-keyframes bouncing-text {
     0% {
